@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color:#fff">YouTube STUDIO</a>
+          <form action="" role="search">
+            <input type="search" oninput="searchVideos(this)" placeholder="Search..." class="search-video form-control " style="width: 400px;">
+          </form>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end pt-3" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Add video Youtube studio</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mt-5">
+              
+              <form class="d-flex flex-column" role="doc-notice">
+                <div class="alert alert-danger d-flex align-items-center d-none" role="alert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div style="font-size: 16px;">
+                    Please, enter video's url and name!
+                  </div>
+                </div>
+                 <input type="text" placeholder="Video's URL" class="form-control url"  >
+                 <input type="text" placeholder="Video's Name" class="name form-control mt-5 ">
+                <button style="font-size: 22px" type="button" class="add btn btn-success mt-5 w-50 mx-auto">Create</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        
+        <div class="videos-screen w-50 d-none">
+            
+        </div>
+
+        <div class="videos-list px-5 d-flex flex-wrap">
+              
+        </div>
+       
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex flex-column" role="doc-notice">
+              <input type="text" placeholder="Video's URL" class="form-control url-edit"  >
+              <input type="text" placeholder="Video's Name" class="name-edit form-control mt-3 ">
+           </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="saveEdits()" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+         
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="movies.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
